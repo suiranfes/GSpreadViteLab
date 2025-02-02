@@ -16,7 +16,7 @@ Google Spread Sheet に Vite + React + TypeScript から書き込みを行うテ
 
 ### 2. Google Cloud の準備
 
-1. 18歳以上のアカウントを準備
+1. 18歳以上のアカウントを準備 / [Google Cloud](https://console.cloud.google.com) にアクセス
 1. `新しいプロジェクト`を作成
 
 <!-- 
@@ -47,6 +47,20 @@ Google Spread Sheet に Vite + React + TypeScript から書き込みを行うテ
 1. `npm run start`
 1. これで、表示される下のボタンを押すと、`Sheet1` の `A1`-`A2` に *Hello World* と表示されます。(これにより、書き込み実験成功です)
 
+## 注意
+
+Google Spread Sheets API の制限 ([公式ページ](https://developers.google.com/sheets/api/limits?hl=ja)より引用)
+
+| 読み取りリクエスト|  |
+| - | - |
+| 1プロジェクト、1分あたり | 300 |
+| 1プロジェクト、1ユーザー、1分あたり | 60 |
+
+| 書き込みリクエスト|  |
+| - | - |
+| 1プロジェクト、1分あたり | 300 |
+| 1プロジェクト、1ユーザー、1分あたり | 60 |
+
 ## 参考
 
-- [GSheetLab](https://github.com/suiranfes/GSheetLab)
+- [GSheetLab | SUIRANFES](https://github.com/suiranfes/GSheetLab)
