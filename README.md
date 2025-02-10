@@ -18,17 +18,11 @@ Google Spread Sheet に Vite + React + TypeScript から書き込みを行うテ
 
 1. 18歳以上のアカウントを準備 / [Google Cloud](https://console.cloud.google.com) にアクセス
 1. `新しいプロジェクト`を作成
-
-<!-- 
 1. `API とサービス`から <kbd>API とサービスを有効にする</kbd>ボタンを押し、`Google Sheets API` を追加
-1. また、サイドバーの `API とサービス`から`認証情報`を開き、`サービス アカウントを管理`を開く
-1. <kbd>サービス アカウントを作成</kbd>ボタンを押し、適当に作成する
-1. 作成したアカウントのメールアドレス (`***@***.***.gserviceaccount.com`) をメモする
-1. また、作成したアカウントの`鍵を管理`から、新しい鍵 (JSON) を作成する
-1. 自動的にダウンロードされた `.json` ファイル内の `private_key` をメモする
- -->
-
-> 追記します
+1. また、サイドバーの `API とサービス`から`認証情報`を開く
+1. `API キー`を作成し、そのキーをメモしておく
+1. `OAuth 2.0 クライアント`を作成し、承認済みの JavaScript、リダイレクト URI は `http://localhost:5173` とする (実環境では `https://sell.suiranfes.blue`)
+1. `OAuth 2.0 クライアント` の `クライアント ID` (メアド) をメモする
 
 ### 3. プログラムの動作
 
@@ -36,12 +30,12 @@ Google Spread Sheet に Vite + React + TypeScript から書き込みを行うテ
 1. このリポジトリをクローンする
 1. `.env.local` ファイルを作成し、先ほどメモした情報を利用し、入力する  
     ```.env
-    # スプレッドシートのURLに含まれる文字列
-    VITE_GOOGLE_SPREADSHEET_ID='シートのID'
-    # サービスアカウントのアドレス (**.apps.googleusercontent.com)
-    VITE_GOOGLE_CLIENT_ID='メアド'
+    # スプレッドシートの URL に含まれる文字列
+    VITE_GOOGLE_SPREADSHEET_ID=シートのID
+    # OAuth 2.0 クライアント ID (**.apps.googleusercontent.com)
+    VITE_GOOGLE_CLIENT_ID=メアド
     # API キー
-    VITE_GOOGLE_API_KEY='キー'
+    VITE_GOOGLE_API_KEY=キー
     ```
 1. `npm i`
 1. `npm run start`
